@@ -8,17 +8,39 @@
         <title>Giffty</title>
     </head>
     <body>
-        <div id='index'>
-            <img src='img/logo.png'>
-            <a>Giffty</a>
-            <img src='img/settingsButton.png' align='right'>
-            <p>Need an app to help you host a Secret Santa?</p>
-            <p>Enter the names, gift suggestions, and more for free!</p>
-            <div align='center'>
-                <img src='img/Gift3d.png'>
+        <div id='background-panel'>
+            <div id='settings-panel' class='panel' align='center'>
+                <img src='img/downArrow.png' align='center' onclick="closeSettings('settings')">
+                <select align='center'>
+                    <option>English</option>
+                </select>
+                <select align='center'>
+                    <option>Light theme</option>
+                </select>
             </div>
-            <button>Start</button>
-            <p>How to use</p>
+            <div id='use-panel' class='panel' align='center'>
+                <img src='img/downArrow.png' align='center' onclick="closeSettings('use')">
+                <p>1. Set the occasion name and gift price limit (if there's one).</p>
+                <p>2. Set the guests.</p>
+                <p>3. Set Dark Pairs (optional).</p>
+                <p>4. See the results.</p>
+            </div>
+        </div>
+        <div id='body-holder'>
+            <div id='header'>
+                <img src='img/logo.png'>
+                <a>Giffty</a>
+                <img src='img/settingsButton.png' align='right' onclick="openSettings('settings')">
+            </div>
+            <div id='index'>
+                <p class='title'>Need an app to help you host a Secret Santa?</p>
+                <p class='sub-title'>Enter the names, gift suggestions, and more for free!</p>
+                <div align='center'>
+                    <img src='img/Gift3d.png'>
+                </div>
+                <button class='button'>Start</button>
+                <p onclick="openSettings('use')">How to use</p>
+            </div>
         </div>
     </body>
 </html>

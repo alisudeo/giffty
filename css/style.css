@@ -4,6 +4,10 @@
   font-family: "Coolvetica";
 }
 
+* {
+  outline: none;
+}
+
 @font-face {
   font-family: "Coolvetica";
   src: url("../fonts/coolvetica.ttf");
@@ -16,38 +20,46 @@ body {
   align-items: center;
 }
 
-#index {
+#body-holder {
   width: 90%;
   max-width: 600px;
 }
 
-#index img:nth-of-type(1) {
+#header {
+  width: 100%;
+}
+
+#header img:nth-of-type(1) {
   height: 4.2vh;
   padding-right: 0.5vh;
 }
 
-#index img:nth-of-type(2) {
+#header a:nth-of-type(1) {
+  color: #8542c8;
+  font-size: 5vh;
+}
+
+#header img:nth-of-type(2) {
   height: 5.8vh;
   cursor: pointer;
   border-radius: 50%;
   transition: 0.2s;
 }
 
-#index img:nth-of-type(2):hover {
+#header img:nth-of-type(2):hover {
   background-color: #eee;
 }
 
-#index a:nth-of-type(1) {
-  color: #8542c8;
-  font-size: 5vh;
-}
-
-#index p:nth-of-type(1) {
+#index {
+  width: 100%;
   padding-top: 2vh;
+}
+
+.title {
   font-size: 5vh;
 }
 
-#index p:nth-of-type(2) {
+.sub-title {
   padding-top: 2vh;
   font-size: 3.3vh;
   color: #777;
@@ -62,7 +74,7 @@ body {
   height: 20vh;
 }
 
-#index button {
+.button {
   width: 100%;
   height: 9vh;
   border-radius: 2vh;
@@ -81,7 +93,7 @@ body {
   cursor: pointer;
 }
 
-#index button:hover {
+.button:hover {
   background-color: #733aad;
 }
 
@@ -95,5 +107,60 @@ body {
 }
 
 #index p:nth-of-type(3):hover {
-  color: #555;
+  color: #444;
+}
+
+#background-panel {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  position: absolute;
+  opacity: 0;
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.panel {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4vh 4vh 0 0;
+  background-color: rgba(170, 170, 170, 0.5);
+  padding-bottom: 4vh;
+  transition: 0.4s;
+  margin-bottom: -100vh;
+  display: none;
+}
+
+.panel img {
+  width: 6vh;
+  display: block;
+  padding-top: 3.5vh;
+  cursor: pointer;
+}
+
+.panel select {
+  width: 90%;
+  display: block;
+  margin-top: 3.5vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2vh;
+  border: none;
+  font-size: 3.5vh;
+  padding: 2vh 0 2vh 2vh;
+  appearance: none;
+  background-image: url("../img/downArrow.png");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 4vh 2vh;
+  cursor: pointer;
+}
+
+.panel p {
+  font-size: 4vh;
+  padding-top: 3vh;
+  text-align: justify;
+  width: 90%;
 }
