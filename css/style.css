@@ -47,7 +47,7 @@ body {
 }
 
 #header img:nth-of-type(2):hover {
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.07);
 }
 
 #index {
@@ -62,16 +62,26 @@ body {
 .sub-title {
   padding-top: 2vh;
   font-size: 3.3vh;
-  color: #777;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 #index div {
-  padding-top: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#index div > div {
+  margin-top: 4vh;
+  height: 28vh;
+  width: 28vh;
+  background-color: rgba(133, 66, 200, 0.2);
 }
 
 #index div > img:nth-of-type(1) {
-  width: 20vh;
-  height: 20vh;
+  width: 18vh;
+  height: 18vh;
 }
 
 .button {
@@ -84,7 +94,7 @@ body {
   font-size: 3.5vh;
   text-align: left;
   padding-left: 2vh;
-  margin-top: 6vh;
+  margin-top: 4vh;
   background-image: url("../img/arrowRight.png");
   background-position: 95% 50%;
   background-size: 8vh;
@@ -100,14 +110,14 @@ body {
 #index p:nth-of-type(3) {
   font-size: 2.5vh;
   text-align: center;
-  color: #777;
+  color: rgba(0, 0, 0, 0.4);
   padding-top: 2vh;
   cursor: pointer;
   transition: 0.2s;
 }
 
 #index p:nth-of-type(3):hover {
-  color: #444;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 #background-panel {
@@ -127,7 +137,7 @@ body {
   width: 100%;
   max-width: 600px;
   border-radius: 4vh 4vh 0 0;
-  background-color: rgba(170, 170, 170, 0.5);
+  background-color: rgba(238, 238, 238, 0.7);
   padding-bottom: 4vh;
   transition: 0.4s;
   margin-bottom: -100vh;
@@ -145,7 +155,7 @@ body {
   width: 90%;
   display: block;
   margin-top: 3.5vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.06);
   border-radius: 2vh;
   border: none;
   font-size: 3.5vh;
