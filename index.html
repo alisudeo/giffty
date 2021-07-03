@@ -1,25 +1,22 @@
-<html lang="pt-br">
+<html lang="en-US">
     <head>
         <meta charset="utf-8" />
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="img/logo.png" type="image/x-icon"/>
+        <link rel="icon" href="img/logo.svg" type="image/x-icon"/>
         <script src='js/script.js'></script>
         <title>Giffty</title>
     </head>
     <body>
         <div id='background-panel'>
             <div id='settings-panel' class='panel' align='center'>
-                <img src='img/downArrow.png' align='center' onclick="closeSettings('settings')">
-                <select align='center'>
-                    <option>English</option>
-                </select>
+                <img src='img/line.svg' align='center' onclick="closeSettings('settings')">
                 <select align='center'>
                     <option>Light theme</option>
                 </select>
             </div>
             <div id='use-panel' class='panel' align='center'>
-                <img src='img/downArrow.png' align='center' onclick="closeSettings('use')">
+                <img src='img/line.svg' align='center' onclick="closeSettings('use')">
                 <p>1. Set the occasion name and gift price limit (if there's one).</p>
                 <p>2. Set the guests.</p>
                 <p>3. Set Dark Pairs (optional).</p>
@@ -27,21 +24,32 @@
             </div>
         </div>
         <div id='body-holder'>
-            <div id='header'>
-                <img src='img/logo.png'>
+            <div id='header' align='left'>
+                <img src='img/back.svg' id='back' align='left'>
+                <img src='img/logo.svg' id='logo'>
                 <a>Giffty</a>
-                <img src='img/settingsButton.png' align='right' onclick="openSettings('settings')">
+                <img src='img/settingsButton.svg' id='settings' align='right' onclick="openSettings('settings')">
+                <div id="step-button" align='center'>
+                    <img src='img/stepPurple.svg' id="step-button-1">
+                    <img src='img/stepGrey.svg' id="step-button-2">
+                    <img src='img/stepGrey.svg' id="step-button-3">
+                </div>
             </div>
-            <div id='index'>
+            <div id='index' class='step' style="display: block; margin-left: 0vw;">
                 <p class='title'>Need an app to help you host a Secret Santa?</p>
                 <p class='sub-title'>Enter the names, gift suggestions, and more for free!</p>
                 <div>
-                    <div align='center'>
-                        <img src='img/Gift3d.png'>
-                    </div>
+                    <img src='img/Gift3d.svg'>
                 </div>
-                <button class='button'>Start</button>
+                <button class='button' onclick="nextPage('index', 'budget'), showHeaderInfo()">Start</button>
                 <p onclick="openSettings('use')">How to use</p>
+            </div>
+            <div id='budget' class='step'>
+                <p class='title'>Let's set the budget first.</p>
+                <form>
+                    <input id='gift-price' placeholder="Gift price limit (optional)" onkeyup="verifyInput(['gift-price'], 'next-button-2', 1)" class="input" maxlength="5" onkeypress="return verifyCriteria('num', event)" style="margin-top: 44vh;">
+                </form>
+                <button class='button' id='next-button-2' onclick="nextPage('index', 'budget')">Skip</button>
             </div>
         </div>
     </body>
